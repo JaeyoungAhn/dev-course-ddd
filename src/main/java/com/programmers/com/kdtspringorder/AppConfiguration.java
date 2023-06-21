@@ -15,7 +15,7 @@ import java.util.UUID;
 
 //@ComponentScan
 
-@ComponentScan(basePackages = {"com.programmers.com.kdtspringorder.order", "com.programmers.com.kdtspringorder.voucher"})
+@ComponentScan(basePackages = {"com.programmers.com.kdtspringorder.order", "com.programmers.com.kdtspringorder.voucher", "com.programmers.com.kdtspringorder.configuration"})
 
 //@ComponentScan(
 //        basePackages = {"com.programmers.com.kdtspringorder.voucher","com.programmers.com.kdtspringorder.order"},

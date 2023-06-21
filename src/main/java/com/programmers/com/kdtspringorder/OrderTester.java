@@ -5,6 +5,7 @@ import com.programmers.com.kdtspringorder.order.OrderItem;
 import com.programmers.com.kdtspringorder.order.OrderService;
 import com.programmers.com.kdtspringorder.voucher.FixedAmountVoucher;
 import com.programmers.com.kdtspringorder.voucher.VoucherRepository;
+import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.Assert;
 
@@ -17,7 +18,8 @@ public class OrderTester {
         var applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
         var customerId = UUID.randomUUID();
 
-        var voucherRepository = applicationContext.getBean(VoucherRepository.class);
+        var voucherRepository = BeanFactoryAnnotationUtils.qualifiedBeanOfType(applicationContext.getBeanFactory(), VoucherRepository.class, "memory");
+//        var voucherRepository = applicationContext.getBean(VoucherRepository.class);
         var voucher = voucherRepository.insert(new FixedAmountVoucher(UUID.randomUUID(), 10L));
         var orderService = applicationContext.getBean(OrderService.class);
         var order = orderService.createOrder(customerId, new ArrayList<OrderItem>() {{
