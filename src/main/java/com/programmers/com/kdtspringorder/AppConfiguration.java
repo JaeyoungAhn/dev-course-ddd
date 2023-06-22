@@ -31,6 +31,8 @@ class BeanOne implements InitializingBean {
 //        excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = MemoryVoucherRepository.class)})
 
 //@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
+
+@PropertySource("application.properties")
 public class AppConfiguration {
     @Bean(initMethod = "init")
     public BeanOne beanOne() {
