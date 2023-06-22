@@ -3,13 +3,22 @@ package com.programmers.com.kdtspringorder;
 import com.programmers.com.kdtspringorder.order.Order;
 import com.programmers.com.kdtspringorder.voucher.MemoryVoucherRepository;
 import com.programmers.com.kdtspringorder.voucher.Voucher;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.*;
 
 import java.util.Optional;
 import java.util.UUID;
+
+class BeanOne implements InitializingBean {
+    public void init() {
+        System.out.println("[BeanOne] init called!");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("[BeanOne] afterPropertiesSet called!");
+    }
+}
 
 @Configuration
 
@@ -23,6 +32,14 @@ import java.util.UUID;
 
 //@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
 public class AppConfiguration {
+    @Bean(initMethod = "init")
+    public BeanOne beanOne() {
+        return new BeanOne();
+    }
+
+
+
+
 //    @Bean
 //    public VoucherRepository voucherRepository() {
 //        return new VoucherRepository() {
