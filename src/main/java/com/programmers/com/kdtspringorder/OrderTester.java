@@ -9,15 +9,22 @@ import com.programmers.com.kdtspringorder.voucher.JdbcVoucherRepository;
 import com.programmers.com.kdtspringorder.voucher.VoucherRepository;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.io.Resource;
 import org.springframework.util.Assert;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.nio.channels.Channels;
+import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class OrderTester {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         var applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(AppConfiguration.class);
 
@@ -43,6 +50,20 @@ public class OrderTester {
         System.out.println(MessageFormat.format("[OPPTs] supportVendors -> {0}", orderProperties.getSupportVendors()));
         System.out.println(MessageFormat.format("[OPPTs] description -> {0}", orderProperties.getCurrentLocation()));
 
+
+        var resource = applicationContext.getResource("classpath:application.yaml");
+        var resource2 = applicationContext.getResource("file:HELP.md");
+        var resource3 = applicationContext.getResource("https://stackoverflow.com/");
+        System.out.println(MessageFormat.format("Resource -> {0}", resource3.getClass().getCanonicalName()));
+//        var file = resource3.getFile();
+
+        var readableByteChannel = Channels.newChannel(resource3.getURL().openStream());
+        var bufferedReader = new BufferedReader(Channels.newReader(readableByteChannel, "utf-8"));
+        var contents = bufferedReader.lines().collect(Collectors.joining("\n"));
+        System.out.println(contents);
+
+//        var strings = Files.readAllLines(file.toPath());
+//        System.out.println(strings.stream().reduce("", (a, b) -> a + "\n" + b));
 
         var customerId = UUID.randomUUID();
 
