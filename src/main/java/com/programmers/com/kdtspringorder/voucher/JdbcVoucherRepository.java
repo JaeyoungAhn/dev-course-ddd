@@ -1,6 +1,7 @@
 package com.programmers.com.kdtspringorder.voucher;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
@@ -9,7 +10,8 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-@Qualifier("jdbc")
+//@Qualifier("jdbc")
+@Profile("dev")
 public class JdbcVoucherRepository implements VoucherRepository {
     private final Map<UUID, Voucher> storage = new ConcurrentHashMap<>();
     @Override

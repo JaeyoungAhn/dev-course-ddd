@@ -20,7 +20,7 @@ public class VoucherService {
     private VoucherRepository voucherRepository;
 
     @Autowired
-    public VoucherService(@Qualifier("memory") VoucherRepository voucherRepository) {
+    public VoucherService(VoucherRepository voucherRepository) {
         this.voucherRepository = voucherRepository;
     }
 
