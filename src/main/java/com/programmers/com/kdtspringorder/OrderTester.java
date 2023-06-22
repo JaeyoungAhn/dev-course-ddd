@@ -2,6 +2,7 @@ package com.programmers.com.kdtspringorder;
 
 import com.programmers.com.kdtspringorder.AppConfiguration;
 import com.programmers.com.kdtspringorder.order.OrderItem;
+import com.programmers.com.kdtspringorder.order.OrderProperties;
 import com.programmers.com.kdtspringorder.order.OrderService;
 import com.programmers.com.kdtspringorder.voucher.FixedAmountVoucher;
 import com.programmers.com.kdtspringorder.voucher.VoucherRepository;
@@ -22,10 +23,19 @@ public class OrderTester {
         var version = environment.getProperty("kdt.version");
         var minimumOrderAmount = environment.getProperty("kdt.minimum-order-amount", Integer.class);
         var supportVendors = environment.getProperty("kdt.support-vendors", List.class);
-        System.out.println(MessageFormat.format("version -> {0}", version));
-        System.out.println(MessageFormat.format("minimumOrderAmount -> {0}", minimumOrderAmount));
-        System.out.println(MessageFormat.format("supportVendors -> {0}", supportVendors));
+        var description = environment.getProperty("kdt.description", List.class);
 
+        System.out.println(MessageFormat.format("[getEnv] version -> {0}", version));
+        System.out.println(MessageFormat.format("[getEnv] minimumOrderAmount -> {0}", minimumOrderAmount));
+        System.out.println(MessageFormat.format("[getEnv] supportVendors -> {0}", supportVendors));
+        System.out.println(MessageFormat.format("[getEnv] description -> {0}", description));
+
+
+        var orderProperties = applicationContext.getBean(OrderProperties.class);
+        System.out.println(MessageFormat.format("[OPPTs] version -> {0}", orderProperties.getVersion()));
+        System.out.println(MessageFormat.format("[OPPTs] minimumOrderAmount -> {0}", orderProperties.getMinimumOrderAmount()));
+        System.out.println(MessageFormat.format("[OPPTs] supportVendors -> {0}", orderProperties.getSupportVendors()));
+        System.out.println(MessageFormat.format("[OPPTs] description -> {0}", orderProperties.getCurrentLocation()));
 
 
         var customerId = UUID.randomUUID();

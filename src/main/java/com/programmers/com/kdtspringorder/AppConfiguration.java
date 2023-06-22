@@ -1,9 +1,10 @@
 package com.programmers.com.kdtspringorder;
 
-import com.programmers.com.kdtspringorder.order.Order;
+import com.programmers.com.kdtspringorder.configuration.YamlPropertiesFactory;import com.programmers.com.kdtspringorder.order.Order;
 import com.programmers.com.kdtspringorder.voucher.MemoryVoucherRepository;
 import com.programmers.com.kdtspringorder.voucher.Voucher;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 
 import java.util.Optional;
@@ -32,7 +33,10 @@ class BeanOne implements InitializingBean {
 
 //@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
 
-@PropertySource("application.properties")
+//@PropertySource("application.properties")
+@PropertySource(value = "application.yaml", factory = YamlPropertiesFactory.class)
+@EnableConfigurationProperties // 스프링 부트에 있는 내용임을 알려줌
+//@PropertySource("application.yaml") => 지원 안함
 public class AppConfiguration {
     @Bean(initMethod = "init")
     public BeanOne beanOne() {
