@@ -7,7 +7,10 @@ import com.programmers.com.kdtspringorder.order.OrderService;
 import com.programmers.com.kdtspringorder.voucher.FixedAmountVoucher;
 import com.programmers.com.kdtspringorder.voucher.JdbcVoucherRepository;
 import com.programmers.com.kdtspringorder.voucher.VoucherRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
+import org.springframework.boot.ansi.AnsiOutput;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.util.Assert;
@@ -24,7 +27,12 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class OrderTester {
+    //com.programmers.com.kdtspringorder.OrderTester // SET WARN
+    //com.programmers.com.kdtspringorder.A => WARN
+    //com.programmers.com.kdtspringorder.voucher // SET INFO
+    private static final Logger logger = LoggerFactory.getLogger(OrderTester.class);
     public static void main(String[] args) throws IOException {
+        AnsiOutput.setEnabled(AnsiOutput.Enabled.ALWAYS);
         var applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(AppConfiguration.class);
 
@@ -38,10 +46,11 @@ public class OrderTester {
         var supportVendors = environment.getProperty("kdt.support-vendors", List.class);
         var description = environment.getProperty("kdt.description", List.class);
 
-        System.out.println(MessageFormat.format("[getEnv] version -> {0}", version));
-        System.out.println(MessageFormat.format("[getEnv] minimumOrderAmount -> {0}", minimumOrderAmount));
-        System.out.println(MessageFormat.format("[getEnv] supportVendors -> {0}", supportVendors));
-        System.out.println(MessageFormat.format("[getEnv] description -> {0}", description));
+        logger.error("logger name => {}", logger.getName());
+        logger.debug("[getEnv] version -> {}", version);
+        logger.info("[getEnv] minimumOrderAmount -> {}", minimumOrderAmount);
+        logger.info("[getEnv] supportVendors -> {}", supportVendors);
+        logger.warn("[getEnv] description -> {}", description);
 
 
         var orderProperties = applicationContext.getBean(OrderProperties.class);
@@ -53,7 +62,7 @@ public class OrderTester {
 
         var resource = applicationContext.getResource("classpath:application.yaml");
         var resource2 = applicationContext.getResource("file:HELP.md");
-        var resource3 = applicationContext.getResource("https://stackoverflow.com/");
+        var resource3 = applicationContext.getResource("https://google.com/");
         System.out.println(MessageFormat.format("Resource -> {0}", resource3.getClass().getCanonicalName()));
 //        var file = resource3.getFile();
 
