@@ -6,4 +6,4 @@
         <appender-ref ref="CONSOLE"/>
     </root>
     <logger name="com.programmers.com.kdtspringorder" level="info"/>
-</configuration>
+</configuration>/

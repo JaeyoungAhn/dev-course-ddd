@@ -1,0 +1,43 @@
+01:15:43.956 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+01:15:43.958 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+01:15:43.958 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+01:15:43.958 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+01:15:44.002 [main] ERROR c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+01:15:44.002 [main] DEBUG c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+01:15:44.002 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+01:15:44.003 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+01:15:44.003 [main] WARN  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+01:15:50.451 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Starting KdtSpringOrderApplication using Java 17.0.7 with PID 17616 (/home/quaki/devcourse/kdt-spring-order/target/classes started by quaki in /home/quaki/devcourse/kdt-spring-order)
+01:15:50.452 [main] DEBUG c.p.c.k.KdtSpringOrderApplication -- Running with Spring Boot v3.1.0, Spring v6.0.9
+01:15:50.453 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- The following 2 profiles are active: "local", "dev"
+01:15:50.755 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+01:15:50.756 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+01:15:50.756 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+01:15:50.756 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+01:15:50.818 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Started KdtSpringOrderApplication in 0.657 seconds (process running for 1.19)
+01:35:53.219 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Starting KdtSpringOrderApplication using Java 17.0.7 with PID 22100 (/home/quaki/devcourse/kdt-spring-order/target/classes started by quaki in /home/quaki/devcourse/kdt-spring-order)
+01:35:53.220 [main] DEBUG c.p.c.k.KdtSpringOrderApplication -- Running with Spring Boot v3.1.0, Spring v6.0.9
+01:35:53.221 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- The following 2 profiles are active: "local", "dev"
+01:35:53.531 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+01:35:53.532 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+01:35:53.532 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, dev-c, d]
+01:35:53.533 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+01:35:53.593 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Started KdtSpringOrderApplication in 0.638 seconds (process running for 1.047)
+01:36:17.701 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Starting KdtSpringOrderApplication using Java 17.0.7 with PID 24444 (/home/quaki/devcourse/kdt-spring-order/target/classes started by quaki in /home/quaki/devcourse/kdt-spring-order)
+01:36:17.702 [main] DEBUG c.p.c.k.KdtSpringOrderApplication -- Running with Spring Boot v3.1.0, Spring v6.0.9
+01:36:17.702 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- The following 2 profiles are active: "local", "dev"
+01:36:18.015 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+01:36:18.016 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+01:36:18.016 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, dev-c, d]
+01:36:18.016 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+01:36:18.076 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Started KdtSpringOrderApplication in 0.648 seconds (process running for 1.057)
+01:36:33.475 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Starting KdtSpringOrderApplication using Java 17.0.7 with PID 26860 (/home/quaki/devcourse/kdt-spring-order/target/classes started by quaki in /home/quaki/devcourse/kdt-spring-order)
+01:36:33.476 [main] DEBUG c.p.c.k.KdtSpringOrderApplication -- Running with Spring Boot v3.1.0, Spring v6.0.9
+01:36:33.476 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- The following 2 profiles are active: "local", "dev"
+01:36:33.764 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+01:36:33.765 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+01:36:33.765 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, dev-c, d]
+01:36:33.765 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+01:36:33.824 [main] INFO  c.p.c.k.KdtSpringOrderApplication -- Started KdtSpringOrderApplication in 0.613 seconds (process running for 1.013)

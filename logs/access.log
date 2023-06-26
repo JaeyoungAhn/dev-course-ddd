@@ -1,0 +1,11 @@
+18:02:21.725 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+18:02:21.728 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+18:02:21.728 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+18:02:21.728 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+18:02:21.817 [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+18:02:21.817 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+18:02:21.818 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+18:02:21.818 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+18:02:21.818 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]

@@ -1,0 +1,165 @@
+18:02:39.810 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+18:02:39.812 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+18:02:39.812 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+18:02:39.812 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+18:02:39.877 [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+18:02:39.878 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+18:02:39.878 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+18:02:39.878 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+18:02:39.878 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+%PARSER_ERROR[clr] [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+%PARSER_ERROR[clr] [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[36m18:21:04.886[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[36m18:21:04.887[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[36m18:21:04.888[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[36m18:21:04.888[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[36m18:21:04.951[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[36m18:21:04.952[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[36m18:21:04.952[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[36m18:21:04.952[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[36m18:21:04.952[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[36m18:21:44.679[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[36m18:21:44.681[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[36m18:21:44.681[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[36m18:21:44.681[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[36m18:21:44.730[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[36m18:21:44.731[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[36m18:21:44.732[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[36m18:21:44.732[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[36m18:21:44.732[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[36m18:22:19.475[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[36m18:22:19.478[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[36m18:22:19.479[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[36m18:22:19.479[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[36m18:22:19.551[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[36m18:22:19.551[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[36m18:22:19.551[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[36m18:22:19.551[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[36m18:22:19.552[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[34m18:25:18.565[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[34m18:25:18.567[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[34m18:25:18.568[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[34m18:25:18.568[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[34m18:25:18.633[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[34m18:25:18.634[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[34m18:25:18.634[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[34m18:25:18.635[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[34m18:25:18.635[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[31m18:25:27.037[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[31m18:25:27.039[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[31m18:25:27.039[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[31m18:25:27.039[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[31m18:25:27.126[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[31m18:25:27.127[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[31m18:25:27.127[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[31m18:25:27.127[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[31m18:25:27.127[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[31m18:26:08.218[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[31m18:26:08.220[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[31m18:26:08.221[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[31m18:26:08.221[0;39m [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[31m18:26:08.283[0;39m [main] ERROR c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[31m18:26:08.283[0;39m [main] DEBUG c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[31m18:26:08.283[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[31m18:26:08.284[0;39m [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[31m18:26:08.284[0;39m [main] WARN  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[31m18:26:49.608[0;39m [main] $clr(DEBUG[31m18:26:49.610[0;39m [main] $clr(DEBUG[31m18:26:49.610[0;39m [main] $clr(DEBUG[31m18:26:49.610[0;39m [main] $clr(DEBUG[31m18:26:49.662[0;39m [main] $clr(ERROR[31m18:26:49.662[0;39m [main] $clr(DEBUG[31m18:26:49.662[0;39m [main] $clr(INFO [31m18:26:49.663[0;39m [main] $clr(INFO [31m18:26:49.663[0;39m [main] $clr(WARN [31m18:26:56.561[0;39m [main] $clr(DEBUG[31m18:26:56.563[0;39m [main] $clr(DEBUG[31m18:26:56.563[0;39m [main] $clr(DEBUG[31m18:26:56.563[0;39m [main] $clr(DEBUG[31m18:26:56.636[0;39m [main] $clr(ERROR[31m18:26:56.637[0;39m [main] $clr(DEBUG[31m18:26:56.639[0;39m [main] $clr(INFO [31m18:26:56.640[0;39m [main] $clr(INFO [31m18:26:56.640[0;39m [main] $clr(WARN [31m18:27:14.849[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[31m18:27:14.851[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[31m18:27:14.851[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[31m18:27:14.851[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[31m18:27:14.909[0;39m [main] [31mERROR[0;39m c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[31m18:27:14.909[0;39m [main] [32mDEBUG[0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[31m18:27:14.909[0;39m [main] [32mINFO [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[31m18:27:14.910[0;39m [main] [32mINFO [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[31m18:27:14.910[0;39m [main] [33mWARN [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+[31m18:30:00.586[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+[31m18:30:00.589[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+[31m18:30:00.589[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+[31m18:30:00.589[0;39m [main] [32mDEBUG[0;39m c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+[31m18:30:00.633[0;39m [main] [31mERROR[0;39m c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+[31m18:30:00.633[0;39m [main] [32mDEBUG[0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+[31m18:30:00.633[0;39m [main] [32mINFO [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+[31m18:30:00.634[0;39m [main] [32mINFO [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+[31m18:30:00.634[0;39m [main] [33mWARN [0;39m c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
+18:55:22.450 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] version -> v1.0
+18:55:22.451 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] minimumOrderAmount -> 1
+18:55:22.451 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] supportVendors -> [dev-a, dev-b, c, d]
+18:55:22.451 [main] DEBUG c.p.c.k.order.OrderProperties -- [Value] currentLocation -> null
+18:55:22.503 [main] ERROR c.p.com.kdtspringorder.OrderTester -- logger name => com.programmers.com.kdtspringorder.OrderTester
+18:55:22.504 [main] DEBUG c.p.com.kdtspringorder.OrderTester -- [getEnv] version -> v1.0
+18:55:22.504 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] minimumOrderAmount -> 1
+18:55:22.504 [main] INFO  c.p.com.kdtspringorder.OrderTester -- [getEnv] supportVendors -> null
+18:55:22.504 [main] WARN  c.p.com.kdtspringorder.OrderTester -- [getEnv] description -> [line 1 hello world
+line 2 xxx
+line 3]
