@@ -155,7 +155,7 @@ public class JdbcCustomerRepository {
         return 0;
     }
 
-    static UUID toUUID(byte[] bytes) {
+    public static UUID toUUID(byte[] bytes) {
         var byteBuffer = ByteBuffer.wrap(bytes);
         return new UUID(byteBuffer.getLong(), byteBuffer.getLong());
     }
