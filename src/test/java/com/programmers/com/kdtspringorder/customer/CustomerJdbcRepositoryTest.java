@@ -1,5 +1,6 @@
 package com.programmers.com.kdtspringorder.customer;
 
+import com.wix.mysql.EmbeddedMysql;
 import com.zaxxer.hikari.HikariDataSource;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,11 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
+import static com.wix.mysql.EmbeddedMysql.anEmbeddedMysql;
+import static com.wix.mysql.ScriptResolver.classPathScript;
+import static com.wix.mysql.distribution.Version.v8_0_11;
+import static com.wix.mysql.config.MysqldConfig.aMysqldConfig;
+import static com.wix.mysql.config.Charset.UTF8;
 
 import javax.sql.DataSource;
 
@@ -35,9 +41,9 @@ class CustomerJdbcRepositoryTest {
         @Bean
         public DataSource dataSource() {
             var dataSource = DataSourceBuilder.create()
-                    .url("jdbc:mysql://192.168.0.2:3380/order_mgmt")
-                    .username("username")
-                    .password("password")
+                    .url("jdbc:mysql://localhost:2215/test-order_mgmt")
+                    .username("test")
+                    .password("test1234!")
                     .type(HikariDataSource.class)
                     .build();
 //            dataSource.setMaximumPoolSize(1000);
@@ -60,10 +66,27 @@ class CustomerJdbcRepositoryTest {
 
     Customer newCustomer;
 
+    EmbeddedMysql embeddedMysql;
+
     @BeforeAll
     void setup() {
-        newCustomer = new Customer(UUID.randomUUID(), "test-use1r", "test11-user@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
-        customerJdbcRepository.deleteAll();
+//        newCustomer = new Customer(UUID.randomUUID(), "test-use1r", "test11-user@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
+//        customerJdbcRepository.deleteAll();
+        var mysqlConfig = aMysqldConfig(v8_0_11)
+                .withCharset(UTF8)
+                .withPort(2215)
+                .withUser("test", "test1234!")
+                .withTimeZone("Asia/Seoul")
+                .build();
+
+        embeddedMysql = anEmbeddedMysql(mysqlConfig)
+                .addSchema("test-order_mgmt", classPathScript("schema.sql"))
+                .start();
+    }
+
+    @AfterAll
+    void cleanup() {
+        embeddedMysql.stop();
     }
 
     @Test
