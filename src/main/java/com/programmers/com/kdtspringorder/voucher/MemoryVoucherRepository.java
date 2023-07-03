@@ -1,5 +1,6 @@
 package com.programmers.com.kdtspringorder.voucher;
 
+import com.programmers.com.kdtspringorder.aop.TrackTime;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.DisposableBean;
@@ -30,6 +31,7 @@ public class MemoryVoucherRepository implements VoucherRepository, InitializingB
     }
 
     @Override
+    @TrackTime
     public Voucher insert(Voucher voucher) {
         storage.put(voucher.getVoucherId(), voucher);
         return voucher;
