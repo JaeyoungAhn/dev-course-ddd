@@ -2,13 +2,16 @@ package com.programmers.com.kdtspringorder.customer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.springframework.transaction.support.TransactionCallbackWithoutResult;
+import org.springframework.transaction.support.TransactionTemplate;
 
-import javax.sql.DataSource;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -19,9 +22,13 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CustomerNamedJdbcRepository.class);
     private final NamedParameterJdbcTemplate jdbcTemplate;
+//    private final PlatformTransactionManager transactionManager;
 
-    public CustomerNamedJdbcRepository(NamedParameterJdbcTemplate jdbcTemplate) {
+    private final TransactionTemplate transactionTemplate;
+
+    public CustomerNamedJdbcRepository(NamedParameterJdbcTemplate jdbcTemplate, TransactionTemplate transactionTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+        this.transactionTemplate = transactionTemplate;
     }
 
     private Map<String, Object> toParamMap(Customer customer) {
@@ -36,8 +43,7 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
 
     @Override
     public Customer insert(Customer customer) {
-        var update = jdbcTemplate.update("INSERT INTO customers(customer_id, name, email, created_at) VALUES (UUID_TO_BIN(:customerId), ?, ?, ?)",
-                toParamMap(customer));
+        var update = jdbcTemplate.update("INSERT INTO customers(customer_id, name, email, created_at) VALUES (UUID_TO_BIN(:customerId), :name, :email, :createdAt)", toParamMap(customer));
         if (update != 1) {
             throw new RuntimeException("Nothing was iserted");
         }
@@ -91,7 +97,7 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
     public Optional<Customer> findByName(String name) {
         try {
             return Optional.of(jdbcTemplate.queryForObject("select * from customers WHERE name = :name",
-                    Collections.singletonMap("customerId", name),
+                    Collections.singletonMap("name", name),
                     customerRowMapper));
         } catch (EmptyResultDataAccessException e) {
             logger.error("Got empty result");
@@ -109,6 +115,25 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
             logger.error("Got empty result");
             return Optional.empty();
         }
+    }
+
+    public void testTransaction(Customer customer) {
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                jdbcTemplate.update("UPDATE customers SET name = :name WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+                jdbcTemplate.update("UPDATE customers SET email = :email WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+            }
+        });
+//        var transaction = transactionManager.getTransaction(new DefaultTransactionDefinition());
+//        try {
+//            jdbcTemplate.update("UPDATE customers SET name = :name WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+//            jdbcTemplate.update("UPDATE customers SET email = :email WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+//            transactionManager.commit(transaction);
+//        } catch (DataAccessException e) {
+//            logger.error("Got error", e);
+//            transactionManager.rollback(transaction);
+//        }
     }
 
     @Override
