@@ -176,28 +176,28 @@ class CustomerNamedJdbcRepositoryTest {
         assertThat(retrievedCustomer.get(), samePropertyValuesAs(newCustomer));
     }
 
-    @Test
-    @Order(7)
-    @DisplayName("트렌젝션 테스트")
-    public void testTransaction() throws InterruptedException {
-        var prevOne = customerNamedJdbcRepository.findById(newCustomer.getCustomerID());
-        assertThat(prevOne.isEmpty(), is(false));
-        var newOne = new Customer(UUID.randomUUID(), "a", "a@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
-        var insertedNewOne = customerNamedJdbcRepository.insert(newOne);
-        try {
-            customerNamedJdbcRepository.testTransaction(
-                    new Customer(insertedNewOne.getCustomerID(),
-                        "b", prevOne.get().getEmail(),
-                        newOne.getCreatedAt()));
-        } catch (DataAccessException e) {
-            logger.error("Got error when testing transaction", e);
-        }
-
-        var maybeNewOne = customerNamedJdbcRepository.findById(insertedNewOne.getCustomerID());
-        assertThat(maybeNewOne.isEmpty(), is(false));
-        assertThat(maybeNewOne.get(), samePropertyValuesAs(newOne));
-
-    }
+//    @Test
+//    @Order(7)
+//    @DisplayName("트렌젝션 테스트")
+//    public void testTransaction() throws InterruptedException {
+//        var prevOne = customerNamedJdbcRepository.findById(newCustomer.getCustomerID());
+//        assertThat(prevOne.isEmpty(), is(false));
+//        var newOne = new Customer(UUID.randomUUID(), "a", "a@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
+//        var insertedNewOne = customerNamedJdbcRepository.insert(newOne);
+//        try {
+//            customerNamedJdbcRepository.testTransaction(
+//                    new Customer(insertedNewOne.getCustomerID(),
+//                        "b", prevOne.get().getEmail(),
+//                        newOne.getCreatedAt()));
+//        } catch (DataAccessException e) {
+//            logger.error("Got error when testing transaction", e);
+//        }
+//
+//        var maybeNewOne = customerNamedJdbcRepository.findById(insertedNewOne.getCustomerID());
+//        assertThat(maybeNewOne.isEmpty(), is(false));
+//        assertThat(maybeNewOne.get(), samePropertyValuesAs(newOne));
+//
+//    }
 
 
 }

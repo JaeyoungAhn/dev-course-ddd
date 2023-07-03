@@ -24,11 +24,12 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
     private final NamedParameterJdbcTemplate jdbcTemplate;
 //    private final PlatformTransactionManager transactionManager;
 
-    private final TransactionTemplate transactionTemplate;
+//    private final TransactionTemplate transactionTemplate;
 
-    public CustomerNamedJdbcRepository(NamedParameterJdbcTemplate jdbcTemplate, TransactionTemplate transactionTemplate) {
+    //, TransactionTemplate transactionTemplate
+    public CustomerNamedJdbcRepository(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
-        this.transactionTemplate = transactionTemplate;
+//        this.transactionTemplate = transactionTemplate;
     }
 
     private Map<String, Object> toParamMap(Customer customer) {
@@ -117,14 +118,14 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
         }
     }
 
-    public void testTransaction(Customer customer) {
-        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
-            @Override
-            protected void doInTransactionWithoutResult(TransactionStatus status) {
-                jdbcTemplate.update("UPDATE customers SET name = :name WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
-                jdbcTemplate.update("UPDATE customers SET email = :email WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
-            }
-        });
+//    public void testTransaction(Customer customer) {
+//        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+//            @Override
+//            protected void doInTransactionWithoutResult(TransactionStatus status) {
+//                jdbcTemplate.update("UPDATE customers SET name = :name WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+//                jdbcTemplate.update("UPDATE customers SET email = :email WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
+//            }
+//        });
 //        var transaction = transactionManager.getTransaction(new DefaultTransactionDefinition());
 //        try {
 //            jdbcTemplate.update("UPDATE customers SET name = :name WHERE customer_id = UUID_TO_BIN(:customerId)", toParamMap(customer));
@@ -133,8 +134,8 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
 //        } catch (DataAccessException e) {
 //            logger.error("Got error", e);
 //            transactionManager.rollback(transaction);
-//        }
-    }
+////        }
+//    }
 
     @Override
     public void deleteAll() {
