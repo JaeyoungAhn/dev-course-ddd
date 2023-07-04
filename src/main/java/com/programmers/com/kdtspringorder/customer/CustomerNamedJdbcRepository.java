@@ -2,6 +2,7 @@ package com.programmers.com.kdtspringorder.customer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
@@ -18,6 +19,7 @@ import java.util.*;
 import static com.programmers.com.kdtspringorder.JdbcCustomerRepository.toUUID;
 
 @Repository
+@Primary
 public class CustomerNamedJdbcRepository implements CustomerRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CustomerNamedJdbcRepository.class);
