@@ -23,7 +23,7 @@ public class CustomerController {
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
     public ModelAndView findCustomers() {
         List<Customer> allCustomers = customerService.getAllCustomers();
-        return new ModelAndView("customers", Map.of("serverTime",
+        return new ModelAndView("view/customers", Map.of("serverTime",
                 LocalDateTime.now(), "customers", allCustomers));
     }
 }
