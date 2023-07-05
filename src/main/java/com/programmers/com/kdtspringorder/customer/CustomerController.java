@@ -2,6 +2,7 @@ package com.programmers.com.kdtspringorder.customer;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,5 +26,10 @@ public class CustomerController {
         List<Customer> allCustomers = customerService.getAllCustomers();
         return new ModelAndView("view/customers", Map.of("serverTime",
                 LocalDateTime.now(), "customers", allCustomers));
+    }
+
+    @GetMapping("/customers/new")
+    public String viewNewCustomerPage() {
+        return "views/new-customers";
     }
 }

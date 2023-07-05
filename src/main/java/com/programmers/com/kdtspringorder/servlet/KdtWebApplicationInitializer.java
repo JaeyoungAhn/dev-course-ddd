@@ -1,5 +1,6 @@
 package com.programmers.com.kdtspringorder.servlet;
 
+import com.programmers.com.kdtspringorder.customer.CustomerController;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRegistration;
@@ -11,6 +12,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -18,6 +20,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -37,8 +40,11 @@ public class KdtWebApplicationInitializer implements WebApplicationInitializer {
 
     @Configuration
     @EnableWebMvc
-    @ComponentScan(basePackages = "com.programmers.com.kdtspringorder.customer")
-    @EnableTransactionManagement
+    @ComponentScan(basePackages = "com.programmers.com.kdtspringorder.customer",
+        includeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = CustomerController.class),
+        useDefaultFilters = false
+    )
+//    @EnableTransactionManagement
     static class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
 
         @Override
@@ -47,6 +53,7 @@ public class KdtWebApplicationInitializer implements WebApplicationInitializer {
         }
 
         ApplicationContext applicationContext;
+
         @Override
         public void configureViewResolvers(ViewResolverRegistry registry) {
             registry.jsp().viewNames(new String[]{"jsp/*"});
@@ -104,9 +111,52 @@ public class KdtWebApplicationInitializer implements WebApplicationInitializer {
         }
     }
 
+
+    @Configuration
+    @ComponentScan(basePackages = "com.programmers.com.kdtspringorder.customer",
+            excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = CustomerController.class),
+            useDefaultFilters = false
+    )
+    @EnableTransactionManagement
+    static class RootConfig {
+        @Bean
+        public DataSource dataSource() {
+            var dataSource = DataSourceBuilder.create()
+                    .url("jdbc:mysql://192.168.0.2:3380/order_mgmt")
+                    .username("username")
+                    .password("password")
+                    .type(HikariDataSource.class)
+                    .build();
+//            dataSource.setMaximumPoolSize(1000);
+//            dataSource.setMinimumIdle(100);
+            return dataSource;
+        }
+
+        @Bean
+        public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+            return new JdbcTemplate(dataSource);
+        }
+
+        @Bean
+        public NamedParameterJdbcTemplate namedParameterJdbcTemplate(JdbcTemplate jdbcTemplate) {
+            return new NamedParameterJdbcTemplate(jdbcTemplate);
+        }
+
+        @Bean
+        public PlatformTransactionManager platformTransactionManager(DataSource dataSource) {
+            return new DataSourceTransactionManager(dataSource);
+        }
+
+    }
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         logger.info("Starting server...");
+        var rootApplicationContext = new AnnotationConfigWebApplicationContext();
+        rootApplicationContext.register(RootConfig.class);
+        ContextLoaderListener contextLoaderListener = new ContextLoaderListener(rootApplicationContext);
+        servletContext.addListener(contextLoaderListener);
+
         var applicationContext = new AnnotationConfigWebApplicationContext();
         applicationContext.register(AppConfig.class);
 
